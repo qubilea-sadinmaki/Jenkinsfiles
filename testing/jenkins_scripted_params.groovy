@@ -9,7 +9,6 @@ node {
         echo 'Building....'
         echo "${params.Greeting} World!"
     }
-    }
     stage('Test') {
         echo 'Testing....'
     }
