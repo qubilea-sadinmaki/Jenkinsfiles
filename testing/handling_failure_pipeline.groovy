@@ -12,10 +12,10 @@ pipeline {
     }
     post {
         always {
-            // junit '**/target/*.xml'
+            junit '**/target/*.xml'
         }
         failure {
-            mail to: 'petri.sadinmaki@qubilea.fi', subject: 'The Pipeline failed :('
+            mail to: petri.sadinmaki@qubilea.fi, subject: 'The Pipeline failed :('
         }
     }
 }
