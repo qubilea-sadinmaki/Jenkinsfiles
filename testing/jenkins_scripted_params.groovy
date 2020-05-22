@@ -1,10 +1,9 @@
 #!/usr/bin/env groovy
 
+properties([parameters([string(defaultValue: 'Hello', description: 'How should I greet the world?', name: 'Greeting')])])
+
 node {
     checkout scm
-    parameters {
-        string(name: 'Greeting', defaultValue: 'Hello', description: 'How should I greet the world?')
-    }
     stage('Build') {
         echo 'Building....'
         echo "${params.Greeting} World!"
