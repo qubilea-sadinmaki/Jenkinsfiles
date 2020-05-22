@@ -5,6 +5,7 @@ pipeline {
     stages {
         stage('Test') {
             steps {
+                sh 'echo "Testing..."'
                 sh 'make check'
             }
         }
